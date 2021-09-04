@@ -24,18 +24,21 @@ class StoryMenuState extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['outofplace', 'dice-man'],
+		['out-of-place', 'dice-man'],
+		['stuck-in-nowhere', 'out-of-time', 'zariphobia'],
 	];
 	var curDifficulty:Int = 1;
 
-	public static var weekUnlocked:Array<Bool> = [true, false];
+	public static var weekUnlocked:Array<Bool> = [true, true];
 
 	var weekCharacters:Array<Dynamic> = [
+		['', 'bf', ''],
 		['', 'bf', ''],
 	];
 
 	var weekNames:Array<String> = [
 		"Hexagonal Theft",
+		"Breaking Free",
 	];
 
 	var txtWeekTitle:FlxText;
@@ -67,7 +70,7 @@ class StoryMenuState extends MusicBeatState
 		if (FlxG.sound.music != null)
 		{
 			if (!FlxG.sound.music.playing)
-				FlxG.sound.playMusic(Paths.music('hexMenu'));
+				FlxG.sound.playMusic(Paths.music('hexMenu'), 1);
 		}
 
 		persistentUpdate = persistentDraw = true;
@@ -284,15 +287,20 @@ class StoryMenuState extends MusicBeatState
 			PlayState.campaignScore = 0;
 			new FlxTimer().start(1, function(tmr:FlxTimer)
 			{
-				if (PlayState.SONG.song.toLowerCase() == 'outofplace')
+				if (PlayState.SONG.song.toLowerCase() == 'out-of-place')
 				{
-			    FlxG.switchState(new VideoState('assets/videos/hexintro/hexlole.webm', new PlayState()));
-				LoadingState.loadAndSwitchState(new PlayState(), true);
+					FlxG.switchState(new VideoState('assets/videos/hexintro/hexlole.webm', new PlayState()));
+					LoadingState.loadAndSwitchState(new PlayState(), true);
 				}
+				else if (PlayState.SONG.song.toLowerCase() == 'stuck-in-nowhere')
+				{
+					FlxG.switchState(new VideoState('assets/videos/voidintro/hextrapped.webm', new PlayState()));
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+		        }
 				else
 				{
-				LoadingState.loadAndSwitchState(new PlayState(), true);
-		        }
+					LoadingState.loadAndSwitchState(new PlayState(), true);
+				}
 			});
 		}
 	}

@@ -1,22 +1,9 @@
 bf
 bf-horrified
-dad
-gf
-spooky
-pico
-mom
-mom-car
-bf-car
-parents-christmas
-monster-christmas
-bf-christmas
-gf-christmas
-monster
-bf-pixel
-senpai
-senpai-angry
-spirit
+bf-greg
+greg
 hex
 bloxiam
 chubino
-angry hex
+hex-angry
+retards

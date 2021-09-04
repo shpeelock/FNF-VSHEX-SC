@@ -121,7 +121,7 @@ class TitleState extends MusicBeatState
 	}
 
 	var logoBl:FlxSprite;
-	var gfDance:FlxSprite;
+	var hexbop:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 
@@ -149,50 +149,43 @@ class TitleState extends MusicBeatState
 			// music.loadStream(Paths.music('freakyMenu'));
 			// FlxG.sound.list.add(music);
 			// music.play();
-			FlxG.sound.playMusic(Paths.music('hexMenu'), 0);
+			FlxG.sound.playMusic(Paths.music('hexMenu'), 1);
 
 			FlxG.sound.music.fadeIn(4, 0, 0.7);
 		}
 
-		Conductor.changeBPM(130);
+		Conductor.changeBPM(102);
 		persistentUpdate = true;
 
-		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
-		// bg.antialiasing = true;
-		// bg.setGraphicSize(Std.int(bg.width * 0.6));
-		// bg.updateHitbox();
-		add(bg);
-
-		if(Main.watermarks) {
-			logoBl = new FlxSprite(300, 100);
-			logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
+		var hexbg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('HEXMENUASSETS/hexbg'));
+		hexbg.antialiasing = true;
+		hexbg.setGraphicSize(Std.int(hexbg.width * 1));
+		hexbg.updateHitbox();
+		hexbg.screenCenter();
+		add(hexbg);
+		{
+			logoBl = new FlxSprite(-50, 10);
+			logoBl.frames = Paths.getSparrowAtlas('HEXMENUASSETS/hexLogoBumpin');
 			logoBl.antialiasing = true;
+			logoBl.setGraphicSize(Std.int(logoBl.width * 0.95));
 			logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
 			logoBl.animation.play('bump');
 			logoBl.updateHitbox();
 			// logoBl.screenCenter();
-			// logoBl.color = FlxColor.BLACK;
-		} else {
-			logoBl = new FlxSprite(300, 100);
-			logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
-			logoBl.antialiasing = true;
-			logoBl.animation.addByPrefix('bump', 'logo bumpin', 24);
-			logoBl.animation.play('bump');
-			logoBl.updateHitbox();
-			// logoBl.screenCenter();
-			// logoBl.color = FlxColor.BLACK;
 		}
 
-		gfDance = new FlxSprite(FlxG.width * 0.4, FlxG.height * 0.07);
-		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-		gfDance.antialiasing = true;
-		add(gfDance);
+		hexbop = new FlxSprite(FlxG.width * 1, FlxG.height * 0.4);
+		hexbop.frames = Paths.getSparrowAtlas('HEXMENUASSETS/Hex_Bop');
+		hexbop.animation.addByIndices('danceLeft', 'Hex Bop', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+		hexbop.animation.addByIndices('danceRight', 'Hex Bop', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+		hexbop.antialiasing = true;
+		hexbop.x = 200;
+		hexbop.y = -6;
+		add(hexbop);
 		add(logoBl);
 
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
-		titleText.frames = Paths.getSparrowAtlas('titleEnter');
+		titleText.frames = Paths.getSparrowAtlas('HEXMENUASSETS/titleEnter');
 		titleText.animation.addByPrefix('idle', "Press Enter to Begin", 24);
 		titleText.animation.addByPrefix('press', "ENTER PRESSED", 24);
 		titleText.antialiasing = true;
@@ -397,9 +390,9 @@ class TitleState extends MusicBeatState
 		danceLeft = !danceLeft;
 
 		if (danceLeft)
-			gfDance.animation.play('danceRight');
+			hexbop.animation.play('danceRight');
 		else
-			gfDance.animation.play('danceLeft');
+			hexbop.animation.play('danceLeft');
 
 		FlxG.log.add(curBeat);
 

@@ -35,6 +35,7 @@ class MainMenuState extends MusicBeatState
 
 	var newGaming:FlxText;
 	var newGaming2:FlxText;
+	var hexbg:FlxSprite;
 	public static var firstStart:Bool = true;
 
 	public static var nightly:String = "";
@@ -55,19 +56,22 @@ class MainMenuState extends MusicBeatState
 
 		if (!FlxG.sound.music.playing)
 		{
-			FlxG.sound.playMusic(Paths.music('hexMenu'));
+			FlxG.sound.playMusic(Paths.music('hexMenu'), 1);
 		}
 
 		persistentUpdate = persistentDraw = true;
 
-		var bg:FlxSprite = new FlxSprite(-100).loadGraphic(Paths.image('menuBG'));
-		bg.scrollFactor.x = 0;
-		bg.scrollFactor.y = 0.10;
-		bg.setGraphicSize(Std.int(bg.width * 1.1));
-		bg.updateHitbox();
-		bg.screenCenter();
-		bg.antialiasing = true;
-		add(bg);
+		hexbg = new FlxSprite(0, 0);
+		hexbg.frames = Paths.getSparrowAtlas('HEXMENUASSETS/hexmenuBG');
+		hexbg.animation.addByPrefix('boppy', 'menuBG', 24);
+		hexbg.animation.play('boppy');
+		hexbg.scrollFactor.x = 0;
+		hexbg.scrollFactor.y = 0.10;
+		hexbg.setGraphicSize(Std.int(hexbg.width * 1.1));
+		hexbg.updateHitbox();
+		hexbg.screenCenter();
+		hexbg.antialiasing = true;
+		add(hexbg);
 
 		camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
@@ -80,7 +84,7 @@ class MainMenuState extends MusicBeatState
 		magenta.screenCenter();
 		magenta.visible = false;
 		magenta.antialiasing = true;
-		magenta.color = 0xFFfd719b;
+		magenta.color = 0xFFC20200;
 		add(magenta);
 		// magenta.scrollFactor.set();
 
@@ -172,8 +176,8 @@ class MainMenuState extends MusicBeatState
 					selectedSomethin = true;
 					FlxG.sound.play(Paths.sound('confirmMenu'));
 					
-					if (FlxG.save.data.flashing)
-						FlxFlicker.flicker(magenta, 1.1, 0.15, false);
+					/*if (FlxG.save.data.flashing)
+						FlxFlicker.flicker(magenta, 1.1, 0.15, false);*/
 
 					menuItems.forEach(function(spr:FlxSprite)
 					{

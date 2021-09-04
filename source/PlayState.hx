@@ -155,6 +155,8 @@ class PlayState extends MusicBeatState
 
 	public var dialogue:Array<String> = ['dad:blah blah blah', 'bf:coolswag'];
 
+	var reulin:FlxSprite;
+
 	var halloweenBG:FlxSprite;
 	var isHalloween:Bool = false;
 
@@ -201,6 +203,48 @@ class PlayState extends MusicBeatState
 	
 	// Will decide if she's even allowed to headbang at all depending on the song
 	private var allowedToHeadbang:Bool = false;
+	public function spinchevent(numberlol)
+		{
+			var spinch:FlxSprite = new FlxSprite();
+			if (numberlol == 1)
+			{
+				spinch.loadGraphic(Paths.image('hex/spinch'));
+			}
+									
+			spinch.antialiasing = true;
+			spinch.active = false;
+			spinch.scrollFactor.set();
+			spinch.screenCenter();
+			add(spinch);
+			FlxTween.tween(spinch, {y: spinch.y += 100, alpha: 0}, Conductor.crochet / 1000, {
+				ease: FlxEase.cubeInOut,
+				onComplete: function(twn:FlxTween)
+				{
+					spinch.destroy();
+				}
+			});
+		}
+	public function LawAbidingCitizen(numberlol)
+		{
+			var spingle:FlxSprite = new FlxSprite();
+			if (numberlol == 1)
+			{
+				spingle.loadGraphic(Paths.image('hex/average law abiding citizen of new jersey'));
+			}
+									
+			spingle.antialiasing = true;
+			spingle.active = false;
+			spingle.scrollFactor.set();
+			spingle.screenCenter();
+			add(spingle);
+			FlxTween.tween(spingle, {y: spingle.y += 100, alpha: 1}, Conductor.crochet / 100, {
+				ease: FlxEase.cubeInOut,
+				onComplete: function(twn:FlxTween)
+				{
+					spingle.destroy();
+				}
+			});
+		}
 	// Per song additive offset
 	public static var songOffset:Float = 0;
 	// BotPlay text
@@ -280,7 +324,10 @@ class PlayState extends MusicBeatState
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
 		if (isStoryMode)
 		{
-			detailsText = "Story Mode: Week " + storyWeek;
+			{
+				detailsText = "Story Mode: Week " + storyWeek;
+			}
+
 		}
 		else
 		{
@@ -342,8 +389,16 @@ class PlayState extends MusicBeatState
 				dialogue = CoolUtil.coolTextFile(Paths.txt('roses/rosesDialogue'));
 			case 'thorns':
 				dialogue = CoolUtil.coolTextFile(Paths.txt('thorns/thornsDialogue'));	
-			case 'outofplace':
-				dialogue = CoolUtil.coolTextFile(Paths.txt('outofplace/dialog'));	
+			case 'out-of-place':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('out-of-place/dialog'));	
+			case 'dice-man':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('dice-man/dialog'));	
+			case 'stuck-in-nowhere':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('stuck-in-nowhere/poopshitfartfuckyou'));
+			case 'out-of-time':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('out-of-time/assfard'));
+			case 'zariphobia':
+				dialogue = CoolUtil.coolTextFile(Paths.txt('zariphobia/thedumbassesdialogue'));
 		}
 
 		switch(SONG.stage)
@@ -353,13 +408,35 @@ class PlayState extends MusicBeatState
 				{
 						defaultCamZoom = 0.7;
 						curStage = 'reulin';
-						var bg:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('hex/reulin'));
-						bg.antialiasing = true;
-						bg.scrollFactor.set(0.9, 0.9);
-						bg.active = false;
-						add(bg);
+						reulin = new FlxSprite(-600, -200).loadGraphic(Paths.image('hex/reulin'));
+						reulin.antialiasing = true;
+						reulin.scrollFactor.set(0.9, 0.9);
+						reulin.active = false;
+						add(reulin);
 
 	            }	
+			case 'bloxiamreulin':
+				{
+						defaultCamZoom = 0.7;
+						curStage = 'bloxiamreulin';
+						reulin = new FlxSprite(-600, -200).loadGraphic(Paths.image('hex/reulin'));
+						reulin.antialiasing = true;
+						reulin.scrollFactor.set(0.9, 0.9);
+						reulin.active = false;
+						reulin.alpha = 0;
+						add(reulin);
+
+				}	
+			case 'the-void':
+				{
+					defaultCamZoom = 0.9;
+					curStage = 'the-void';
+					var bg:FlxSprite = new FlxSprite(-600, 0).loadGraphic(Paths.image('hex/the_void'));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(1, 1);
+					bg.active = false;
+					add(bg);
+				}
 			case 'chubsland':
 				{
 						defaultCamZoom = 0.7;
@@ -370,6 +447,16 @@ class PlayState extends MusicBeatState
 						bg.active = false;
 						add(bg);
 
+				}
+			case 'empty':
+				{
+					defaultCamZoom = 0.9;
+					curStage = 'empty';
+					var bg:FlxSprite = new FlxSprite(-600, 0).loadGraphic(Paths.image('hex/empty lol'));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(1, 1);
+					bg.active = false;
+					add(bg);
 				}				
 			default:
 			{
@@ -431,35 +518,16 @@ class PlayState extends MusicBeatState
 					camPos.x += 600;
 					tweenCamIn();
 				}
-
-			case "spooky":
-				dad.y += 200;
-			case "monster":
-				dad.y += 100;
-			case 'monster-christmas':
-				dad.y += 130;
-			case 'dad':
-				camPos.x += 400;
-			case 'pico':
-				camPos.x += 600;
-				dad.y += 300;
-			case 'parents-christmas':
-				dad.x -= 500;
-			case 'senpai':
-				dad.x += 150;
-				dad.y += 360;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'senpai-angry':
-				dad.x += 150;
-				dad.y += 360;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
-			case 'spirit':
-				dad.x -= 150;
-				dad.y += 100;
-				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
+			case 'the-void':
+				gf.visible = false;
+			case 'reulin':
+				gf.visible = false;
+			case 'chubsland':
+				gf.visible = false;
 			case 'chubino':
 				dad.y += 300;
-				camPos.y += 230;
+			case 'retards':
+				dad.y += 50;
 			case 'bloxiam':
 				dad.y -= 150;
 		}
@@ -505,6 +573,8 @@ class PlayState extends MusicBeatState
 				boyfriend.y += 220;
 				gf.x += 180;
 				gf.y += 300;
+			case 'empty':
+				boyfriend.y += 140;
 		}
 
 		add(gf);
@@ -512,6 +582,7 @@ class PlayState extends MusicBeatState
 		// Shitty layering but whatev it works LOL
 		if (curStage == 'limo')
 			add(limo);
+
 
 		add(dad);
 		add(boyfriend);
@@ -724,8 +795,25 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'thorns':
 					schoolIntro(doof);
-				case 'outofplace':
+				case 'out-of-place':
 					schoolIntro(doof);
+				case 'dice-man':
+					schoolIntro(doof);
+				case 'stuck-in-nowhere':	
+					schoolIntro(doof);
+				case 'out-of-time':	
+					var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
+					black.scrollFactor.set();
+					add(black);
+					FlxG.sound.play(Paths.sound('bloxiamdistance', 'shared'));
+					new FlxTimer().start(1, function(swagTimer:FlxTimer)
+					{
+						remove(black);
+						schoolIntro(doof);
+					});
+				case 'zariphobia':	
+					FlxG.sound.play(Paths.sound('BLOXIAMIMPACT'));
+					schoolIntro(doof);	
 				default:
 					startCountdown();
 			}
@@ -1751,14 +1839,18 @@ class PlayState extends MusicBeatState
 
 				switch (dad.curCharacter)
 				{
-					case 'mom':
-						camFollow.y = dad.getMidpoint().y;
-					case 'senpai':
-						camFollow.y = dad.getMidpoint().y - 430;
-						camFollow.x = dad.getMidpoint().x - 100;
-					case 'senpai-angry':
-						camFollow.y = dad.getMidpoint().y - 430;
-						camFollow.x = dad.getMidpoint().x - 100;
+					case 'greg':
+						camFollow.y = dad.getMidpoint().y - 580;
+						camFollow.x = dad.getMidpoint().x - 590;
+					case 'hex' | 'hex-angry':
+						camFollow.y = dad.getMidpoint().y + 280;
+					case 'retards':
+						camFollow.y = dad.getMidpoint().y + 50;
+					case 'chubino':
+						camFollow.y = dad.getMidpoint().y + 200;
+					case 'bloxiam':
+						camFollow.y = dad.getMidpoint().y + 450;
+						camFollow.x = dad.getMidpoint().x - 200;
 				}
 
 				if (dad.curCharacter == 'mom')
@@ -1985,6 +2077,8 @@ class PlayState extends MusicBeatState
 					{
 						if (SONG.song != 'Tutorial')
 							camZooming = true;
+						if (SONG.song != 'greed')
+							camZooming = true;
 
 						var altAnim:String = "";
 	
@@ -2004,6 +2098,13 @@ class PlayState extends MusicBeatState
 								dad.playAnim('singDOWN' + altAnim, true);
 							case 0:
 								dad.playAnim('singLEFT' + altAnim, true);
+						}
+
+						switch(dad.curCharacter)
+						{
+							case 'bloxiam' | 'retards':
+									health -= 0.001;
+								
 						}
 						
 						if (FlxG.save.data.cpuStrums)
@@ -2168,6 +2269,7 @@ class PlayState extends MusicBeatState
 			{
 				FlxTransitionableState.skipNextTransIn = true;
 			    FlxTransitionableState.skipNextTransOut = true;
+				
 
 				campaignScore += Math.round(songScore);
 
@@ -2176,7 +2278,20 @@ class PlayState extends MusicBeatState
 				if (storyPlaylist.length <= 0)
 				{
 					//MainMenuState.reRoll = true;
-					LoadingState.loadAndSwitchState(new VideoState("assets/videos/bloxiamangry/heisangry.webm", new MainMenuState()));
+					
+						if (SONG.song == 'dice man')
+						{
+							LoadingState.loadAndSwitchState(new VideoState("assets/videos/hexoutro/heisangry.webm", new StoryMenuState()));
+						}
+						else if (SONG.song == 'zariphobia')
+						{
+							LoadingState.loadAndSwitchState(new VideoState("assets/videos/bloxiamoutro/bloxiamoutro.webm", new MainMenuState()));
+						}
+						else
+						{
+							FlxG.switchState(new MainMenuState());
+						}
+
 
 					if (storyDifficulty == 2)
 					FlxG.save.data.beatenHard = true;
@@ -2228,8 +2343,10 @@ class PlayState extends MusicBeatState
 				    FlxG.sound.music.stop();
 				    switch (songLowercase)
 					{
-					case 'outofplace':
-						LoadingState.loadAndSwitchState(new VideoState("assets/videos/hexdead/hexlawl.webm", new PlayState()));
+					case 'out-of-place':
+						LoadingState.loadAndSwitchState(new VideoState("assets/videos/hexdieslol/hexlawl.webm", new PlayState()));
+					case 'out-of-time':
+						LoadingState.loadAndSwitchState(new VideoState("assets/videos/zariphobiaintro/zariphobia.webm", new PlayState()));
 					default:
 						LoadingState.loadAndSwitchState(new PlayState());
 				    }
@@ -2275,6 +2392,33 @@ class PlayState extends MusicBeatState
 				totalNotesHit += wife;
 
 			var daRating = daNote.rating;
+
+		//Sue me twice
+		var splash:FlxSprite = new FlxSprite(daNote.x, playerStrums.members[daNote.noteData].y);
+		if (!curStage.startsWith('school'))
+		{
+			var tex:flixel.graphics.frames.FlxAtlasFrames = Paths.getSparrowAtlas('noteSplashes');
+			splash.frames = tex;
+			splash.animation.addByPrefix('splash 0 0', 'note impact 1 purple', 24, false);
+			splash.animation.addByPrefix('splash 0 1', 'note impact 1 blue', 24, false);
+			splash.animation.addByPrefix('splash 0 2', 'note impact 1 green', 24, false);
+			splash.animation.addByPrefix('splash 0 3', 'note impact 1 red', 24, false);
+			splash.animation.addByPrefix('splash 1 0', 'note impact 2 purple', 24, false);
+			splash.animation.addByPrefix('splash 1 1', 'note impact 2 blue', 24, false);
+			splash.animation.addByPrefix('splash 1 2', 'note impact 2 green', 24, false);
+			splash.animation.addByPrefix('splash 1 3', 'note impact 2 red', 24, false);
+			if (daRating == 'sick')
+			{
+				add(splash);
+				splash.cameras = [camHUD];
+				splash.animation.play('splash ' + FlxG.random.int(0, 1) + " " + daNote.noteData);
+				splash.visible = true;
+				splash.alpha = 0.7;
+				splash.offset.x += 90;
+				splash.offset.y += 80;
+				splash.animation.finishCallback = function(name) splash.kill();
+			}
+		}
 
 			switch(daRating)
 			{
@@ -2362,12 +2506,14 @@ class PlayState extends MusicBeatState
 			timeShown = 0;
 			switch(daRating)
 			{
-				case 'shit' | 'bad':
-					currentTimingShown.color = FlxColor.RED;
+				case 'shit':
+					currentTimingShown.color = 0xFF8A8A8A;
+				case 'bad':				
+					currentTimingShown.color = 0xFFC4C4C4;
 				case 'good':
-					currentTimingShown.color = FlxColor.GREEN;
+					currentTimingShown.color = FlxColor.WHITE;
 				case 'sick':
-					currentTimingShown.color = FlxColor.CYAN;
+					currentTimingShown.color = FlxColor.WHITE;
 			}
 			currentTimingShown.borderStyle = OUTLINE;
 			currentTimingShown.borderSize = 1;
@@ -3173,17 +3319,35 @@ class PlayState extends MusicBeatState
 				dad.playAnim('cheer', true);
 			}
 			
-		if (curSong == 'bloxiam')
-		{
-			if (curStep == 72)
-		    {
-	            boyfriend.playAnim('scared', true);
-            }
-			if (curStep == 76)
-		    {
-	            boyfriend.playAnim('scared', true);
-            }	
-        }
+		if (curSong == 'out-of-time') 
+			{
+				switch (curBeat)
+				{
+					case 6:
+						FlxTween.tween(FlxG.camera, {zoom: 1.5}, 0.4, {ease: FlxEase.expoOut,});
+						spinchevent(1);
+					case 37:
+						spinchevent(1);
+					/*case 41:
+						spinchevent(1);*/
+					/*case 158:
+						FlxG.log.add('did yuo know that that uhh that umm uh');
+						LawAbidingCitizen(1);*/
+					case 231:
+						boyfriend.playAnim('hey', true);
+			}
+		}
+		if (curSong == 'dice man') 
+			{
+				switch (curBeat)
+				{
+					case 19:
+						FlxTween.tween(reulin, {alpha: 1}, 0.7);
+						FlxTween.tween(FlxG.camera, {zoom: 1.5}, 0.7, {ease: FlxEase.expoOut,});
+					case 20:
+						reulin.alpha = 1;
+			}
+		}	
 		switch (curStage)
 		{
 			case 'school':

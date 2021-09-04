@@ -25,6 +25,8 @@ class FreeplayState extends MusicBeatState
 	var curSelected:Int = 0;
 	var curDifficulty:Int = 1;
 
+	var shalopbg:FlxSprite;
+
 	var scoreText:FlxText;
 	var comboText:FlxText;
 	var diffText:FlxText;
@@ -70,8 +72,17 @@ class FreeplayState extends MusicBeatState
 
 		// LOAD CHARACTERS
 
-		var bg:FlxSprite = new FlxSprite().loadGraphic(Paths.image('menuBGBlue'));
-		add(bg);
+		shalopbg = new FlxSprite(0, 0);
+		shalopbg.frames = Paths.getSparrowAtlas('HEXMENUASSETS/freeplayBG');
+		shalopbg.animation.addByPrefix('boppy', 'freeplayBG', 24);
+		shalopbg.animation.play('boppy');
+		shalopbg.scrollFactor.x = 0;
+		shalopbg.scrollFactor.y = 0.10;
+		shalopbg.setGraphicSize(Std.int(shalopbg.width * 1.1));
+		shalopbg.updateHitbox();
+		shalopbg.screenCenter();
+		shalopbg.antialiasing = true;
+		add(shalopbg);
 
 		grpSongs = new FlxTypedGroup<Alphabet>();
 		add(grpSongs);

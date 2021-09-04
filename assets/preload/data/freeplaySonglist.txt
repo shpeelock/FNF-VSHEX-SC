@@ -1,3 +1,8 @@
-outofplace:hex:1
-dice-man:bloxiam:1
+out of place:hex:1
+dice man:bloxiam:1
+stuck in nowhere:hex:2
+out of time:hex:2
+zariphobia:retards:2
+greed:greg:4
 chubino:chubino:3
+baka no yume:retards:3

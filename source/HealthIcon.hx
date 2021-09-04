@@ -19,7 +19,6 @@ class HealthIcon extends FlxSprite
 		animation.add('bf', [0, 1], 0, false, isPlayer);
 		animation.add('bf-car', [0, 1], 0, false, isPlayer);
 		animation.add('bf-christmas', [0, 1], 0, false, isPlayer);
-		animation.add('bf-horrified', [0,1], 0, false, isPlayer);
 		animation.add('bf-pixel', [21, 21], 0, false, isPlayer);
 		animation.add('spooky', [2, 3], 0, false, isPlayer);
 		animation.add('pico', [4, 5], 0, false, isPlayer);
@@ -38,10 +37,16 @@ class HealthIcon extends FlxSprite
 		animation.add('parents-christmas', [17, 18], 0, false, isPlayer);
 		animation.add('monster', [19, 20], 0, false, isPlayer);
 		animation.add('monster-christmas', [19, 20], 0, false, isPlayer);
+		//hex shit
 		animation.add('hex', [24,25], 0, false, isPlayer);
+		animation.add('hex-angry', [24,25], 0, false, isPlayer);
 		animation.add('bloxiam', [26,27], 0, false, isPlayer);
 		animation.add('chubino', [28,29], 0, false, isPlayer);
-		animation.add('angry hex', [24,25], 0, false, isPlayer);
+		animation.add('bf-void', [30,31], 0, false, isPlayer);
+		animation.add('bf-horrified', [32,33], 0, false, isPlayer);
+		animation.add('retards', [34, 35], 0, false, isPlayer);
+		animation.add('greg', [36, 37], 0, false, isPlayer);
+		animation.add('bf-greg', [30,31], 0, false, isPlayer);
 		animation.play(char);
 
 		switch(char)
