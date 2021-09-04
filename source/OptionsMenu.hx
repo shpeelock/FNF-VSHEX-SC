@@ -71,17 +71,22 @@ class OptionsMenu extends MusicBeatState
 
 	var currentSelectedCat:OptionCategory;
 	var blackBorder:FlxSprite;
+	var hexthinky:FlxSprite;
 	override function create()
 	{
 		instance = this;
-		var menuBG:FlxSprite = new FlxSprite().loadGraphic(Paths.image("menuDesat"));
-
-		menuBG.color = 0xFFCDA100;
-		menuBG.setGraphicSize(Std.int(menuBG.width * 1.1));
-		menuBG.updateHitbox();
-		menuBG.screenCenter();
-		menuBG.antialiasing = true;
-		add(menuBG);
+		
+		hexthinky = new FlxSprite(0, 0);
+		hexthinky.frames = Paths.getSparrowAtlas('HEXMENUASSETS/options_bg');
+		hexthinky.animation.addByPrefix('boppy', 'options', 24);
+		hexthinky.animation.play('boppy');
+		hexthinky.scrollFactor.x = 0;
+		hexthinky.scrollFactor.y = 0.10;
+		hexthinky.setGraphicSize(Std.int(hexthinky.width * 1.1));
+		hexthinky.updateHitbox();
+		hexthinky.screenCenter();
+		hexthinky.antialiasing = true;
+		add(hexthinky);
 
 		grpControls = new FlxTypedGroup<Alphabet>();
 		add(grpControls);
