@@ -40,7 +40,7 @@ class MainMenuState extends MusicBeatState
 
 	public static var nightly:String = "";
 
-	public static var kadeEngineVer:String = "hex" + nightly;
+	public static var kadeEngineVer:String = "hex / 1.5.3" + nightly;
 	public static var gameVer:String = "HEX";
 
 	var magenta:FlxSprite;
@@ -170,6 +170,7 @@ class MainMenuState extends MusicBeatState
 				if (optionShit[curSelected] == 'donate')
 				{
 					fancyOpenURL("https://sites.google.com/view/bloxiam/home");
+					FlxG.sound.play(Paths.sound('bloxiamconfirm'));
 				}
 				else
 				{

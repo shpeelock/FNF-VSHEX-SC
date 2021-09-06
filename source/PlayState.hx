@@ -508,6 +508,7 @@ class PlayState extends MusicBeatState
 
 		var camPos:FlxPoint = new FlxPoint(dad.getGraphicMidpoint().x, dad.getGraphicMidpoint().y);
 
+
 		switch (SONG.player2)
 		{
 			case 'gf':
@@ -796,12 +797,13 @@ class PlayState extends MusicBeatState
 				case 'thorns':
 					schoolIntro(doof);
 				case 'out-of-place':
-					schoolIntro(doof);
+					HEXIntro(doof);
 				case 'dice-man':
-					schoolIntro(doof);
+					HEXIntro(doof);
 				case 'stuck-in-nowhere':	
-					schoolIntro(doof);
+					HEXIntro(doof);
 				case 'out-of-time':	
+					//swaws intro
 					var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
 					black.scrollFactor.set();
 					add(black);
@@ -809,11 +811,11 @@ class PlayState extends MusicBeatState
 					new FlxTimer().start(1, function(swagTimer:FlxTimer)
 					{
 						remove(black);
-						schoolIntro(doof);
+						HEXIntro(doof);
 					});
 				case 'zariphobia':	
 					FlxG.sound.play(Paths.sound('BLOXIAMIMPACT'));
-					schoolIntro(doof);	
+					HEXIntro(doof);	
 				default:
 					startCountdown();
 			}
@@ -833,6 +835,20 @@ class PlayState extends MusicBeatState
 		super.create();
 	}
 
+	function HEXIntro(?dialogueBox:DialogueBox):Void
+		{	
+			inCutscene = true;
+			
+			camHUD.visible = false;
+	
+			FlxG.camera.fade(FlxColor.BLACK, 1, true, function()
+				{
+					camHUD.visible = true;
+					add(dialogueBox);
+				}, true);
+			
+		}
+
 	function schoolIntro(?dialogueBox:DialogueBox):Void
 	{
 		var black:FlxSprite = new FlxSprite(-100, -100).makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
@@ -850,17 +866,12 @@ class PlayState extends MusicBeatState
 		senpaiEvil.updateHitbox();
 		senpaiEvil.screenCenter();
 
-		// pre lowercasing the song name (schoolIntro)
-		var songLowercase = StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase();
-			switch (songLowercase) {
-				case 'dad-battle': songLowercase = 'dadbattle';
-				case 'philly-nice': songLowercase = 'philly';
-			}
-		if (songLowercase == 'roses' || songLowercase == 'thorns')
+		if (StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'roses'
+			|| StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'thorns')
 		{
 			remove(black);
 
-			if (songLowercase == 'thorns')
+			if (StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'thorns')
 			{
 				add(red);
 			}
@@ -880,7 +891,7 @@ class PlayState extends MusicBeatState
 				{
 					inCutscene = true;
 
-					if (songLowercase == 'thorns')
+					if (StringTools.replace(PlayState.SONG.song, " ", "-").toLowerCase() == 'thorns')
 					{
 						add(senpaiEvil);
 						senpaiEvil.alpha = 0;
@@ -1483,6 +1494,12 @@ class PlayState extends MusicBeatState
 		#if !debug
 		perfectMode = false;
 		#end
+
+		if (SONG.song.toLowerCase() == 'zariphobia' && FlxG.sound.music.playing && !inCutscene)
+			health -= 0.0007 * (elapsed / (1/60));
+		
+		else if (SONG.song.toLowerCase() == 'dice man' && FlxG.sound.music.playing && !inCutscene)
+			health -= 0.0007 * (elapsed / (6/60));
 
 		if (FlxG.save.data.botplay && FlxG.keys.justPressed.ONE)
 			camHUD.visible = !camHUD.visible;
@@ -2100,12 +2117,6 @@ class PlayState extends MusicBeatState
 								dad.playAnim('singLEFT' + altAnim, true);
 						}
 
-						switch(dad.curCharacter)
-						{
-							case 'bloxiam' | 'retards':
-									health -= 0.001;
-								
-						}
 						
 						if (FlxG.save.data.cpuStrums)
 						{

@@ -23,6 +23,9 @@ class GameOverSubstate extends MusicBeatSubstate
 			case 'bf-pixel':
 				stageSuffix = '-pixel';
 				daBf = 'bf-pixel-dead';
+			case 'bf-horrified' | 'bf-void':
+				stageSuffix = '-bloxiam';
+				daBf = 'bf-bloxiam-dead';
 			default:
 				daBf = 'bf';
 		}

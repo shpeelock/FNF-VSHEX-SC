@@ -205,6 +205,21 @@ class Character extends FlxSprite
 
 				flipX = true;
 
+			case 'bf-bloxiam-dead':
+				frames = Paths.getSparrowAtlas('hex/BF_bloxiam_death', 'shared');
+				animation.addByPrefix('singUP', "BF bloxiam death", 24, false);
+				animation.addByPrefix('firstDeath', "BF bloxiam death", 24, false);
+				animation.addByPrefix('deathLoop', "BF bloxiam Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF bloxiam Dead confirm", 24, false);
+				animation.play('firstDeath');
+
+				addOffset('firstDeath', -300);
+				addOffset('deathLoop', -304, -230);
+				addOffset('deathConfirm', -304, -234);
+				playAnim('firstDeath');
+				
+				flipX = true;
+
 			case 'hex':
 				// boy if you dont
 				iconColor = "FFD35656";

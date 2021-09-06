@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BF_bloxiam_death.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BF bloxiam Dead Loop0000" x="7595" y="3184" width="439" height="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0001" x="6739" y="5637" width="439" height="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0002" x="7178" y="5637" width="439" height="508" frameX="0" frameY="-2" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0003" x="7617" y="5637" width="439" height="508" frameX="0" frameY="-2" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0004" x="2226" y="5660" width="439" height="507" frameX="0" frameY="-3" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0005" x="2665" y="5660" width="439" height="507" frameX="0" frameY="-3" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0006" x="2634" y="6675" width="439" height="506" frameX="0" frameY="-4" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0007" x="3073" y="6675" width="439" height="506" frameX="0" frameY="-4" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0008" x="3512" y="6675" width="439" height="506" frameX="0" frameY="-4" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0009" x="0" y="6680" width="439" height="506" frameX="0" frameY="-4" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0010" x="439" y="6680" width="439" height="506" frameX="0" frameY="-4" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0011" x="878" y="6687" width="439" height="506" frameX="0" frameY="-4" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead Loop0012" x="1317" y="6687" width="439" height="506" frameX="0" frameY="-4" frameWidth="439" frameHeight="510"/>
+	<SubTexture name="BF bloxiam Dead confirm0000" x="4464" y="5662" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0001" x="4903" y="5662" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0002" x="3104" y="5663" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0003" x="3543" y="5663" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0004" x="3982" y="5663" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0005" x="1023" y="5675" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0006" x="1462" y="5675" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0007" x="5342" y="6092" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0008" x="5781" y="6092" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0009" x="6220" y="6092" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0010" x="7178" y="6145" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0011" x="7617" y="6145" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0012" x="6659" y="6147" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0013" x="1901" y="6167" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0014" x="2340" y="6167" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0015" x="4421" y="6168" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0016" x="4860" y="6168" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0017" x="2779" y="6169" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0018" x="3218" y="6169" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0019" x="3657" y="6169" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0020" x="0" y="6174" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0021" x="439" y="6174" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0022" x="878" y="6181" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0023" x="1317" y="6181" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0024" x="5299" y="6598" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0025" x="5738" y="6598" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0026" x="6177" y="6598" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0027" x="7098" y="6651" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0028" x="7537" y="6651" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0029" x="6616" y="6653" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0030" x="1756" y="6673" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0031" x="2195" y="6673" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0032" x="4096" y="6674" width="439" height="506"/>
+	<SubTexture name="BF bloxiam Dead confirm0033" x="4535" y="6674" width="439" height="506"/>
+	<SubTexture name="BF bloxiam death0000" x="3529" y="7591" width="433" height="415" frameX="-6" frameY="-323" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0001" x="3962" y="7591" width="433" height="415" frameX="-6" frameY="-323" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0002" x="7528" y="7157" width="453" height="411" frameX="0" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0003" x="6425" y="7159" width="453" height="411" frameX="0" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0004" x="1756" y="7179" width="447" height="411" frameX="-2" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0005" x="3951" y="7180" width="447" height="411" frameX="-2" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0006" x="0" y="7186" width="442" height="411" frameX="-4" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0007" x="442" y="7193" width="442" height="411" frameX="-4" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0008" x="2647" y="7181" width="441" height="412" frameX="-4" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0009" x="3088" y="7181" width="441" height="412" frameX="-4" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0010" x="884" y="7193" width="439" height="412" frameX="-5" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0011" x="5952" y="7526" width="439" height="412" frameX="-5" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0012" x="4842" y="7527" width="439" height="412" frameX="-5" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0013" x="5281" y="7527" width="439" height="412" frameX="-5" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0014" x="7528" y="7568" width="439" height="412" frameX="-5" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0015" x="6391" y="7570" width="439" height="412" frameX="-5" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0016" x="6830" y="7579" width="439" height="412" frameX="-5" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0017" x="1323" y="7590" width="439" height="412" frameX="-5" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0018" x="1762" y="7590" width="439" height="412" frameX="-5" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0019" x="4398" y="7180" width="444" height="412" frameX="-8" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0020" x="2203" y="7181" width="444" height="412" frameX="-8" frameY="-329" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0021" x="5952" y="7104" width="473" height="422" frameX="-5" frameY="-324" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0022" x="7055" y="7157" width="473" height="422" frameX="-5" frameY="-324" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0023" x="4974" y="7104" width="489" height="423" frameX="-10" frameY="-318" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0024" x="5463" y="7104" width="489" height="423" frameX="-10" frameY="-318" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0025" x="5487" y="5637" width="626" height="455" frameX="-4" frameY="-286" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0026" x="6113" y="5637" width="626" height="455" frameX="-4" frameY="-286" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0027" x="1185" y="3202" width="851" height="489" frameX="-5" frameY="-248" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0028" x="2348" y="3962" width="851" height="489" frameX="-5" frameY="-248" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0029" x="4464" y="5119" width="1023" height="543" frameX="-5" frameY="-208" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0030" x="0" y="5631" width="1023" height="543" frameX="-5" frameY="-208" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0031" x="2226" y="5098" width="1119" height="562" frameX="-6" frameY="-183" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0032" x="3345" y="5101" width="1119" height="562" frameX="-6" frameY="-183" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0033" x="5793" y="4548" width="1155" height="567" frameX="-5" frameY="-175" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0034" x="6948" y="4548" width="1155" height="567" frameX="-5" frameY="-175" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0035" x="1185" y="3962" width="1163" height="568" frameX="-5" frameY="-173" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0036" x="5579" y="3980" width="1163" height="568" frameX="-5" frameY="-173" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0037" x="6742" y="3980" width="1163" height="568" frameX="-5" frameY="-173" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0038" x="0" y="4486" width="1163" height="568" frameX="-5" frameY="-173" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0039" x="1163" y="4530" width="1163" height="568" frameX="-5" frameY="-173" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0040" x="2326" y="4530" width="1163" height="568" frameX="-5" frameY="-173" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0041" x="3255" y="3961" width="1162" height="569" frameX="-5" frameY="-172" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0042" x="4417" y="3961" width="1162" height="569" frameX="-5" frameY="-172" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0043" x="3489" y="4530" width="1152" height="571" frameX="-5" frameY="-170" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0044" x="4641" y="4548" width="1152" height="571" frameX="-5" frameY="-170" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0045" x="0" y="5054" width="1113" height="577" frameX="-5" frameY="-171" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0046" x="1113" y="5098" width="1113" height="577" frameX="-5" frameY="-171" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0047" x="5793" y="5115" width="1097" height="522" frameX="-5" frameY="-219" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0048" x="6890" y="5115" width="1097" height="522" frameX="-5" frameY="-219" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0049" x="5425" y="3185" width="1070" height="538" frameX="-5" frameY="-203" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0050" x="0" y="3202" width="1185" height="642" frameX="-5" frameY="-99" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0051" x="0" y="3844" width="1185" height="642" frameX="-5" frameY="-99" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0052" x="2338" y="0" width="1203" height="777" frameX="-5" frameY="-3" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0053" x="3541" y="0" width="1203" height="777" frameX="-5" frameY="-3" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0054" x="4744" y="0" width="1203" height="777" frameX="-5" frameY="-3" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0055" x="0" y="0" width="1169" height="814" frameX="-5" frameY="0" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0056" x="1169" y="0" width="1169" height="814" frameX="-5" frameY="0" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0057" x="5947" y="0" width="1138" height="797" frameX="-5" frameY="-20" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0058" x="2338" y="777" width="1138" height="797" frameX="-5" frameY="-20" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0059" x="7085" y="0" width="1099" height="796" frameX="-5" frameY="-33" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0060" x="3476" y="777" width="1099" height="796" frameX="-5" frameY="-33" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0061" x="4575" y="777" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0062" x="7085" y="796" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0063" x="5660" y="797" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0064" x="0" y="814" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0065" x="1085" y="814" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0066" x="3476" y="1573" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0067" x="4561" y="1573" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0068" x="2170" y="1574" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0069" x="6745" y="1592" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0070" x="5646" y="1593" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0071" x="0" y="1610" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0072" x="1085" y="1610" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0073" x="3255" y="2369" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0074" x="4340" y="2369" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0075" x="2170" y="2370" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0076" x="6731" y="2388" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0077" x="5425" y="2389" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0078" x="0" y="2406" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0079" x="1085" y="2406" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0080" x="3255" y="3165" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0081" x="4340" y="3165" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0082" x="2170" y="3166" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+	<SubTexture name="BF bloxiam death0083" x="6510" y="3184" width="1085" height="796" frameX="-5" frameY="-37" frameWidth="1208" frameHeight="833"/>
+</TextureAtlas>
