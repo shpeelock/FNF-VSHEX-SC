@@ -220,6 +220,38 @@ class Character extends FlxSprite
 				
 				flipX = true;
 
+			case 'bf-hex':
+				var tex = Paths.getSparrowAtlas('hex/bf_hex', 'shared');
+				frames = tex;
+
+				trace(tex.frames.length);
+
+				animation.addByPrefix('idle', 'BF idle shaking instance 1', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance 1', 24, false);
+				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS instance 1', 24, false);
+				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS instance 1', 24, false);
+				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS instance 1', 24, false);
+				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS instance 1', 24, false);
+				animation.addByPrefix('hey', 'BF HEY instance 1', 24, false);
+
+				addOffset('idle', -5);
+				addOffset("singUP", -29, 27);
+				addOffset("singRIGHT", -38, -7);
+				addOffset("singLEFT", 12, -6);
+				addOffset("singDOWN", -10, -50);
+				addOffset("singUPmiss", -29, 27);
+				addOffset("singRIGHTmiss", -30, 21);
+				addOffset("singLEFTmiss", 12, 24);
+				addOffset("singDOWNmiss", -11, -19);
+				addOffset("hey", 7, 4);
+				
+				playAnim('idle');
+
+				flipX = true;	
+
 			case 'hex':
 				// boy if you dont
 				iconColor = "FFD35656";
