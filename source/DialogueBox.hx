@@ -273,15 +273,16 @@ class DialogueBox extends FlxSpriteGroup
 		switch (curCharacter)
 		{
 			case 'dad':
+				box.flipX = true;
 				portraitRight.visible = false;
 				if (!portraitLeft.visible)
 				{
-					box.flipX = true;
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 					swagDialogue.sounds =  [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 				}
 			case 'bf':
+				box.flipX = false;
 				portraitLeft.visible = false;
 				if (!portraitRight.visible)
 				{
@@ -291,48 +292,48 @@ class DialogueBox extends FlxSpriteGroup
 					swagDialogue.sounds =  [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 				}
 			case 'bfwtf':
+				box.flipX = false;
 				portraitLeft.visible = false;
 				if (!portraitRight.visible)
 				{
-					box.flipX = false;
 					portraitRight.visible = true;
 					portraitRight.animation.play('enterwtf');
 					swagDialogue.sounds =  [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
 				}			
 			case 'blo':
+				box.flipX = true;
 				portraitRight.visible = false;
 				if (!portraitLeft.visible)
 				{
-					box.flipX = true;
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enterbloxiam');
 					swagDialogue.sounds =  [FlxG.sound.load(Paths.sound('bloxiam', 'shared'), 0.6)];
 				}
 			case 'blo2':
+				box.flipX = true;
 				portraitRight.visible = false;
 				if (!portraitLeft.visible)
 				{
-					box.flipX = true;
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enterbloxiam');
 					swagDialogue.sounds =  [FlxG.sound.load(Paths.sound('bloxiam', 'shared'), 0.6)];
 
 				}
 			case 'sussy':
+				box.flipX = true;
 				portraitLeft.visible = false;
 				if (!portraitLeftBloxiam.visible)
 				{
-					box.flipX = true;
 					portraitLeftBloxiam.visible = true;
 					portraitLeftBloxiam.animation.play('enterbloxiam');
 					swagDialogue.sounds =  [FlxG.sound.load(Paths.sound('bloxiam', 'shared'), 0.6)];
 				}
 			case 'hex':
+				box.flipX = true;
 				portraitLeftBloxiam.visible = false;
 				portraitRight.visible = false;
 				if (!portraitLeft.visible)
 				{
-					box.flipX = true;
 					portraitLeft.visible = true;
 					portraitLeft.animation.play('enter');
 					swagDialogue.sounds =  [FlxG.sound.load(Paths.sound('pixelText'), 0.6)];
