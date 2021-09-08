@@ -23,9 +23,28 @@ class GameOverSubstate extends MusicBeatSubstate
 			case 'bf-pixel':
 				stageSuffix = '-pixel';
 				daBf = 'bf-pixel-dead';
-			case 'bf-horrified' | 'bf-void':
+			case 'bf-horrified':
 				stageSuffix = '-bloxiam';
 				daBf = 'bf-bloxiam-dead';
+			case 'bf-void':
+				// song check
+				if (PlayState.SONG.song.toLowerCase()  == 'stuck-in-nowhere' || PlayState.SONG.song.toLowerCase() == 'out-of-time')
+					{
+						stageSuffix = '-hex';
+						daBf = 'bf-hex-dead';
+					}
+					else
+					{
+						//zariphobia
+						stageSuffix = '-bloxiam';
+						daBf = 'bf-bloxiam-dead';
+					}
+			case 'bf-hex':
+				stageSuffix = '-hex';
+				daBf = 'bf-hex-dead';
+			case 'bf-greg':
+				stageSuffix = '-hex';
+				daBf = 'bf-hex-dead';
 			default:
 				daBf = 'bf';
 		}

@@ -165,6 +165,37 @@ class Character extends FlxSprite
 
 				flipX = true;
 
+			// hex death animations
+			case 'bf-bloxiam-dead':
+				frames = Paths.getSparrowAtlas('hex/BF_bloxiam_death', 'shared');
+				animation.addByPrefix('singUP', "BF bloxiam death", 24, false);
+				animation.addByPrefix('firstDeath', "BF bloxiam death", 24, false);
+				animation.addByPrefix('deathLoop', "BF bloxiam Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF bloxiam Dead confirm", 24, false);
+				animation.play('firstDeath');
+
+				addOffset('firstDeath', -300);
+				addOffset('deathLoop', -304, -230);
+				addOffset('deathConfirm', -304, -234);
+				playAnim('firstDeath');
+				
+				flipX = true;
+			case 'bf-hex-dead':
+				frames = Paths.getSparrowAtlas('hex/bf_hex_death', 'shared');
+				animation.addByPrefix('singUP', "BF hex death", 24, false);
+				animation.addByPrefix('firstDeath', "BF hex death", 24, false);
+				animation.addByPrefix('deathLoop', "BF hex Dead Loop", 24, true);
+				animation.addByPrefix('deathConfirm', "BF hex Dead confirm", 24, false);
+				animation.play('firstDeath');
+
+				addOffset('firstDeath', -300);
+				addOffset('deathLoop', -360, 5);
+				addOffset('deathConfirm', -360, 7);
+				playAnim('firstDeath');
+				
+				flipX = true;
+			
+			// hex animations	
 			case 'bf-horrified':
 				var tex = Paths.getSparrowAtlas('hex/bfHorrified', 'shared');
 				frames = tex;
@@ -204,22 +235,6 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				flipX = true;
-
-			case 'bf-bloxiam-dead':
-				frames = Paths.getSparrowAtlas('hex/BF_bloxiam_death', 'shared');
-				animation.addByPrefix('singUP', "BF bloxiam death", 24, false);
-				animation.addByPrefix('firstDeath', "BF bloxiam death", 24, false);
-				animation.addByPrefix('deathLoop', "BF bloxiam Dead Loop", 24, true);
-				animation.addByPrefix('deathConfirm', "BF bloxiam Dead confirm", 24, false);
-				animation.play('firstDeath');
-
-				addOffset('firstDeath', -300);
-				addOffset('deathLoop', -304, -230);
-				addOffset('deathConfirm', -304, -234);
-				playAnim('firstDeath');
-				
-				flipX = true;
-
 			case 'bf-hex':
 				var tex = Paths.getSparrowAtlas('hex/bf_hex', 'shared');
 				frames = tex;

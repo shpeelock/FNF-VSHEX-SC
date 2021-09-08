@@ -43,7 +43,8 @@ class HealthIcon extends FlxSprite
 		animation.add('bloxiam', [26,27], 0, false, isPlayer);
 		animation.add('chubino', [28,29], 0, false, isPlayer);
 		animation.add('bf-void', [30,31], 0, false, isPlayer);
-		animation.add('bf-hex', [30,31], 0, false, isPlayer);
+		animation.add('bf-hex-dead', [0, 1], 0, false, isPlayer);
+		animation.add('bf-hex', [0, 1], 0, false, isPlayer);
 		animation.add('bf-horrified', [32,33], 0, false, isPlayer);
 		animation.add('retards', [34, 35], 0, false, isPlayer);
 		animation.add('greg', [36, 37], 0, false, isPlayer);
