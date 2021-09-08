@@ -226,7 +226,7 @@ class Character extends FlxSprite
 
 				trace(tex.frames.length);
 
-				animation.addByPrefix('idle', 'BF idle shaking instance 1', 24, false);
+				animation.addByPrefix('idle', 'BF idle dance instance 1', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP instance 1', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance 1', 24, false);
 				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance 1', 24, false);
