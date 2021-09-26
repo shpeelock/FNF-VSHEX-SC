@@ -5,6 +5,7 @@ bf-horrified
 bf-greg
 greg
 hex
+hex-swagger
 bloxiam
 chubino
 hex-angry

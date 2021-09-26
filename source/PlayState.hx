@@ -519,11 +519,7 @@ class PlayState extends MusicBeatState
 					camPos.x += 600;
 					tweenCamIn();
 				}
-			case 'the-void':
-				gf.visible = false;
-			case 'reulin':
-				gf.visible = false;
-			case 'chubsland':
+			case 'reulin' | 'the-void' | 'chubsland':
 				gf.visible = false;
 			case 'chubino':
 				dad.y += 300;
@@ -531,6 +527,8 @@ class PlayState extends MusicBeatState
 				dad.y += 50;
 			case 'bloxiam':
 				dad.y -= 150;
+			case 'hex-swagger':
+				dad.y += 67;
 		}
 
 
@@ -1861,6 +1859,9 @@ class PlayState extends MusicBeatState
 						camFollow.x = dad.getMidpoint().x - 590;
 					case 'hex' | 'hex-angry':
 						camFollow.y = dad.getMidpoint().y + 280;
+					case 'hex-swagger':
+						camFollow.y = dad.getMidpoint().y + 90;
+						camFollow.x = dad.getMidpoint().x - 20;
 					case 'retards':
 						camFollow.y = dad.getMidpoint().y + 50;
 					case 'chubino':

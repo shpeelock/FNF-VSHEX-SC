@@ -305,6 +305,27 @@ class Character extends FlxSprite
 
 				playAnim('idle');
 			
+			case 'hex-swagger':
+				// I HATE YOU S
+				iconColor = "FFD35656";
+				tex = Paths.getSparrowAtlas('hex/hexMan','shared');
+				frames = tex;
+				animation.addByPrefix('idle', 'FUCK Y idle', 24);
+				animation.addByPrefix('singUP', 'FUCK Y Up', 24);
+				animation.addByPrefix('singRIGHT', 'FUCK Y left', 24);
+				animation.addByPrefix('singDOWN', 'FUCK Y down', 24);
+				animation.addByPrefix('singLEFT', 'FUCK Y right', 24);
+
+				addOffset('idle');
+				addOffset("singUP");
+				addOffset("singRIGHT");
+				addOffset("singLEFT");
+				addOffset("singDOWN");
+
+				setGraphicSize(Std.int(width * 1.2));
+
+				playAnim('idle');
+			
 			case 'bloxiam':
 				// bloxiam kept crashing the game i hate bloxiam
 				iconColor = "FFD12D2D";

@@ -40,6 +40,7 @@ class HealthIcon extends FlxSprite
 		//hex shit
 		animation.add('hex', [24,25], 0, false, isPlayer);
 		animation.add('hex-angry', [24,25], 0, false, isPlayer);
+		animation.add('hex-swagger', [24,25], 0, false, isPlayer);
 		animation.add('bloxiam', [26,27], 0, false, isPlayer);
 		animation.add('chubino', [28,29], 0, false, isPlayer);
 		animation.add('bf-void', [30,31], 0, false, isPlayer);
