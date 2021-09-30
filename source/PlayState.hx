@@ -2561,8 +2561,8 @@ class PlayState extends MusicBeatState
 			
 			var comboSpr:FlxSprite = new FlxSprite().loadGraphic(Paths.image(pixelShitPart1 + 'combo' + pixelShitPart2));
 			comboSpr.screenCenter();
-			comboSpr.x = rating.x;
-			comboSpr.y = rating.y + 100;
+			comboSpr.x = 335;
+			comboSpr.y += 80;
 			comboSpr.acceleration.y = 600;
 			comboSpr.velocity.y -= 150;
 
@@ -2596,6 +2596,10 @@ class PlayState extends MusicBeatState
 			currentTimingShown.cameras = [camHUD];
 			comboSpr.cameras = [camHUD];
 			rating.cameras = [camHUD];
+
+			if (combo >= 10){
+				add(comboSpr);
+			}
 
 			var seperatedScore:Array<Int> = [];
 	
